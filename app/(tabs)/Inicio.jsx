@@ -23,7 +23,7 @@ const Index = () => {
       <TouchableOpacity style={styles.card}>
         <Link href="abi" style={styles.link}>
           <View style={styles.cardContent}>
-            <Image source={imagenes.ro} style={styles.image} />
+            <Image source={imagenes.rocioo} style={styles.image} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Rocío Gutierrez</Text>
               <Text style={styles.detailText}>Signo: Sagitario</Text>
