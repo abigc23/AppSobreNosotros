@@ -13,7 +13,7 @@ const Index = () => {
             <View style={styles.textContainer}>
               <Text style={styles.title}>Julián Mayola</Text>
               <Text style={styles.detailText}>Signo: Sagitario</Text>
-              <Text style={styles.detailText}>Altura: 1.20m</Text>
+              <Text style={styles.detailText}>Altura: 1.25m</Text>
               <Text style={styles.detailText}>Color favorito: azul Arch</Text>
             </View>
           </View>
@@ -23,11 +23,11 @@ const Index = () => {
       <TouchableOpacity style={styles.card}>
         <Link href="abi" style={styles.link}>
           <View style={styles.cardContent}>
-            <Image source={imagenes.mayo} style={styles.image} />
+            <Image source={imagenes.foto} style={styles.image} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Rocío Gutierrez</Text>
               <Text style={styles.detailText}>Signo: Sagitario</Text>
-              <Text style={styles.detailText}>Altura: 1.74m</Text>
+              <Text style={styles.detailText}>Altura: 1.73m</Text>
               <Text style={styles.detailText}>Color favorito: negro</Text>
             </View>
           </View>
@@ -37,7 +37,7 @@ const Index = () => {
       <TouchableOpacity style={styles.card}>
         <Link href="aguero" style={styles.link}>
           <View style={styles.cardContent}>
-            <Image source={imagenes.mayo} style={styles.image} />
+            <Image source={imagenes.pelado} style={styles.image} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Damian Aguero</Text>
               <Text style={styles.detailText}>Signo: Piscis</Text>
@@ -59,11 +59,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#e9e9e9',
   },
   card: {
-    backgroundColor: '#E1E1E1', // Color de fondo similar al de la imagen
+    backgroundColor: '#ffffff', // Color de fondo similar al de la imagen
     padding: 20,
     margin: 10,
     borderRadius: 20,
-    width: 420, // Ancho incrementado
+    width: '90%', // Ancho incrementado
     flexDirection: 'row',
     alignItems: 'center',
     shadowColor: '#000',
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 100,
     borderRadius: 20,
     marginRight: 20,
   },
