@@ -1,6 +1,44 @@
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
 import imagenes from '../../imagenes';
+import { WebView } from 'react-native-webview';
+
+const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spotify Embed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: inherit;
+    }
+    #spotify-embed {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    id="spotify-embed"
+    src="https://open.spotify.com/embed/track/174gCegpUjug5Z2yQ8ectM?utm_source=generator"
+    width="100%"
+    height="352"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</body>
+</html>
+`;
 
 const MayolaScreen = () => {
   const [showMore, setShowMore] = useState(false);
@@ -18,6 +56,11 @@ const MayolaScreen = () => {
             <Text style={styles.detailText}>• Estado Civil: Independiente, fiel solo a su ambición</Text>
             <Text style={styles.detailText}>• Nacionalidad: Desconocida, pero su influencia se siente en todos lados</Text>
           </View>
+        </View>
+        <View style={styles.webview}>
+          <WebView
+            source={{ html: htmlContent }}
+          />
         </View>
           <View style={styles.moreContent}>
             <Text style={styles.headline2}>La Maestra de las Sombras</Text>
@@ -54,7 +97,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     backgroundColor: '#e9e9e9',
-    padding: 20,
+    padding: 15,
   },
   article: {
     backgroundColor: '#ffffff',
@@ -85,6 +128,14 @@ const styles = StyleSheet.create({
     borderBottomColor: '#2f2f2f',
     paddingBottom: 10,
     textAlign: 'center',
+  },
+  webview: {
+    width: '100%',
+    height: 155,
+    marginBottom: 30,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: 'inherit',
   },
   profileSection: {
     flexDirection: 'row',

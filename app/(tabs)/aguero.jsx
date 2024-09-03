@@ -1,6 +1,44 @@
 import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import imagenes from '../../imagenes';
+import { WebView } from 'react-native-webview';
+
+const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spotify Embed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: inherit;
+    }
+    #spotify-embed {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    id="spotify-embed"
+    src="https://open.spotify.com/embed/track/2kQDcD7adY2odZLLfIexFj?utm_source=generator&theme=0"
+    width="100%"
+    height="352"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</body>
+</html>
+`;
 
 const Aguero = () => {
   return (
@@ -16,6 +54,12 @@ const Aguero = () => {
             <Text style={styles.detailText}>• Estado Civil: Buscado</Text>
             <Text style={styles.detailText}>• Nacionalidad: River Plate</Text>
           </View>
+        </View>
+        <Text style={styles.detailText}>• Canción favorita del maleante:</Text>
+        <View style={styles.webview}>
+          <WebView
+            source={{ html: htmlContent }}
+          />
         </View>
         <Text style={styles.headline2}>
           Mati, más conocido como "El Pochola", es un conocido traficante del barrio de la 13.
@@ -99,6 +143,14 @@ const styles = StyleSheet.create({
     borderBottomColor: '#2f2f2f',
     paddingBottom: 10,
     textAlign: 'center',
+  },
+  webview: {
+    width: '100%',
+    height: 155,
+    marginBottom: 30,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: 'inherit',
   },
   profileSection: {
     flexDirection: 'row',

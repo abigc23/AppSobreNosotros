@@ -33,7 +33,6 @@ const Index = () => {
           </View>
         </Link>
       </TouchableOpacity>
-
       <TouchableOpacity style={styles.card}>
         <Link href="aguero" style={styles.link}>
           <View style={styles.cardContent}>

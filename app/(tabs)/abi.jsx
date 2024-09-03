@@ -1,8 +1,51 @@
-import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
-import React from 'react';
+import { View, Text, ScrollView, Image, StyleSheet, Button } from 'react-native';
+import React, { useState } from 'react';
 import imagenes from '../../imagenes';
+import { WebView } from 'react-native-webview';
+import { Audio } from 'expo-av';
+
+const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spotify Embed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: inherit;
+    }
+    #spotify-embed {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    id="spotify-embed"
+    src="https://open.spotify.com/embed/track/7F7kL3i6SDEIbDcoJZGiig?utm_source=generator&theme=0"
+    width="100%"
+    height="352"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</body>
+</html>
+`;
+
 
 const Abi = () => {
+
+
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.article}>
@@ -16,6 +59,11 @@ const Abi = () => {
             <Text style={styles.detailText}>• Estado Civil: gobernada como Luz domina a la oscuridad (mati)</Text>
             <Text style={styles.detailText}>• Nacionalidad: CABA con olor a kaka</Text>
           </View>
+        </View>
+        <View style={styles.webview}>
+          <WebView
+            source={{ html: htmlContent }}
+          />
         </View>
         <View style={styles.moreContent}>
           <Text style={styles.headline2}>"Gutierrez Cao" La ladrona del siglo</Text>
@@ -111,6 +159,14 @@ const styles = StyleSheet.create({
     borderBottomColor: '#2f2f2f',
     paddingBottom: 10,
     textAlign: 'center',
+  },
+  webview: {
+    width: '100%',
+    height: 155,
+    marginBottom: 30,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: 'inherit',
   },
   profileSection: {
     flexDirection: 'row',
