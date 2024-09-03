@@ -16,7 +16,12 @@ const pocholay3= require('./assets/abi/pocholay3.jpeg')
 const pocholay4 = require('./assets/abi/pocholaycomiendo.jpeg')
 
 //mayo
-const mayo = require('./assets/mayo.jpg')
+const mayola1 = require('./assets/mayolay/mayola1.jpeg')
+const mayola2 = require('./assets/mayolay/mayola2.jpeg')
+const mayola3 = require('./assets/mayolay/mayola3.jpeg')
+const mayola4 = require('./assets/mayolay/mayola4.jpeg')
+const mayola5 = require('./assets/mayolay/mayola5.jpeg')
+const mayola6 = require('./assets/mayolay/mayola6.jpeg')
 
 //ro
 const ro = require('./assets/foto.png')
@@ -34,7 +39,12 @@ pocholay1,
 pocholay2,
 pocholay3,
 pocholay4,
-mayo,
 ro,
 arch,
+mayola1,
+mayola2,
+mayola3,
+mayola4,
+mayola5,
+mayola6,
 };

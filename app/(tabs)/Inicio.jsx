@@ -1,7 +1,7 @@
 import { Link } from 'expo-router';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
-import imagenes from '../../imagenes'; // Asegúrate de que la ruta sea correcta
+import imagenes from '../../imagenes'; 
 
 const Index = () => {
   return (
@@ -9,7 +9,7 @@ const Index = () => {
       <TouchableOpacity style={styles.card}>
         <Link href="mayo" style={styles.link}>
           <View style={styles.cardContent}>
-            <Image source={imagenes.mayo} style={styles.image} />
+            <Image source={imagenes.mayola1} style={styles.image} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Julián Mayola</Text>
               <Text style={styles.detailText}>Signo: Sagitario</Text>
@@ -23,7 +23,7 @@ const Index = () => {
       <TouchableOpacity style={styles.card}>
         <Link href="abi" style={styles.link}>
           <View style={styles.cardContent}>
-            <Image source={imagenes.foto} style={styles.image} />
+            <Image source={imagenes.ro} style={styles.image} />
             <View style={styles.textContainer}>
               <Text style={styles.title}>Rocío Gutierrez</Text>
               <Text style={styles.detailText}>Signo: Sagitario</Text>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
-    borderRadius: 20,
+    borderRadius: 50,
     marginRight: 20,
   },
   textContainer: {
