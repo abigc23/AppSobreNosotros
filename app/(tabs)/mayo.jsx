@@ -66,7 +66,7 @@ const MayolaScreen = () => {
             <Text style={styles.headline2}>La Maestra de las Sombras</Text>
             <Image source={imagenes.mayola6} style={styles.bodyImage} />
             <Text style={styles.bodyText}>
-              Criada en Spegazzini, Mayola emergió de las sombras con un carácter complejo. Aunque es conocida por su relación con su novia Noelia, en su corazón siempre supo que sus verdaderos deseos se dirigían hacia los varones, especialmente hacia el angel Lazaro.
+              Criada en Spegazzini, Mayola emergió de las sombras con un carácter complejo. Aunque es conocida por su relación con su novia Noelia(suelta esa cosa noelia, sueltalo no te lo comas), en su corazón siempre supo que sus verdaderos deseos se dirigían hacia los varones, especialmente hacia el angel Lazaro.
             </Text>
             <Image source={imagenes.mayola2} style={styles.bodyImage} />
             <Text style={styles.bodyText}>
