@@ -1,24 +1,69 @@
-import { View, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image, TouchableOpacity, } from 'react-native';
+import React from 'react';
+import imagenes from '../imagenes'; 
 import { Link } from 'expo-router'
-import { StatusBar } from 'expo-status-bar'
-const index = () => {
-  // return <Redirect href="Inicio"/>
+
+const Index = () => {
   return (
-    <View className="flex-1 items-center justify-between bg-gray-300">
-      <Text className="font-bold text-4xl text-center mt-16 p-5">
-        Equipo Linux
-        </Text>
-      <View className="w-screen flex items-center justify-center bg-gray-400 h-1/3">
-        <Link href="Inicio" className=" text-center px-3 py-5 bg-gray-500 rounded-md w-[70%] m-5" >
+    <View style={styles.container}>
+      <Text style={styles.title1}>Equipo Linux</Text>
+      <Image source={imagenes.arch} style={styles.image}/>
+      <Text style={styles.title}>Bienvenido a nuestra app</Text>
+      <Text style={styles.subtitle}>Conoce más sobre nosotros</Text>
+      <View style={styles.buttonContainer}>
+        <Link href="Inicio" className=" text-center px-3 py-4 bg-[#ffffff] rounded-[40px] w-[200px] m-5 h-[60px]" >
             <TouchableOpacity>
               <Text className="text-xl">Ingresar</Text>
             </TouchableOpacity>
         </Link>
       </View>
-      <StatusBar style='auto'></StatusBar>
     </View>
-  )
-}
+  );
+};
 
-export default index
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#e9e9e9',
+    paddingHorizontal: 20,
+  },
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    marginBottom: 20,
+  },
+  title1: {
+    fontSize: 35,
+    fontWeight: 'semibold',
+    color: '#2f2f2f',
+    marginBottom: 30,
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#2f2f2f',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontSize: 18,
+    color: '#2f2f2f',
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    paddingHorizontal: 20,
+    alignItems: 'center',
+  },
+  description: {
+    fontSize: 16,
+    color: '#2f2f2f',
+    textAlign: 'center',
+    lineHeight: 24,
+  },
+});
+
+export default Index;
