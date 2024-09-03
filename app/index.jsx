@@ -5,8 +5,6 @@ import { Link } from 'expo-router'
 
 
 const Index = () => {
-
-
   return (
     <View style={styles.container}>
       <Text style={styles.title1}>Equipo Linux</Text>

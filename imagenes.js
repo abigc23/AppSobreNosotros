@@ -25,6 +25,7 @@ const mayola6 = require('./assets/mayolay/mayola6.jpeg')
 
 //ro
 const ro = require('./assets/foto.png')
+const rocioo = require('./assets/rocioo.jpeg')
 
 
 export default{
@@ -47,4 +48,5 @@ mayola3,
 mayola4,
 mayola5,
 mayola6,
+rocioo,
 };
