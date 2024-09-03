@@ -55,6 +55,10 @@ const MayolaScreen = () => {
             <Text className="p-2">
               Durante un tiempo, estuvo en pareja con un joven llamado Lean, quien trabaja en la ruta levantando la mano y levantando otras cosas. Su relación fue tan intensa como sus habilidades en el cibercrimen, pero al final, su ambición y su atracción por Lazaro la llevaron por un camino diferente.
             </Text>
+            <Image
+              className="w-40 h-40 flex self-center p-5 justify-center"
+              source={imagenes.mayola1}
+            />
             <Text className="p-2">
               Mayola, una excompañera de entrenamientos en el PUBG, emergió de las sombras para convertirse en la mayor amenaza de "La Pocholay" Rocio y Mati Aguero. Con unos dedos fríos y calculadores, decidió seguir su propio camino, desafiando la supremacía de la temida dupla.
             </Text>
